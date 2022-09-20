@@ -15,6 +15,7 @@ MarkupSafe==2.1.1
 peewee==3.15.1
 Pillow==9.2.0
 psycopg2-binary==2.9.3
+pytz==2022.2.1
 requests==2.28.1
 soupsieve==2.3.2.post1
 sqlparse==0.4.2
