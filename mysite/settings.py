@@ -57,7 +57,7 @@ ROOT_URLCONF = "mysite.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [os.path.join(BASE_DIR, "templates")],
+        "DIRS": [os.path.join(BASE_DIR, 'templates')],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -125,5 +125,10 @@ STATIC_URL = "static/"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-LOGIN_URL = "/login/"
-LOGIN_REDIRECT_URL = "/"
+LOGIN_URL = '/login/'
+LOGIN_REDIRECT_URL = '/'
+
+#test runner failing so https://stackoverflow.com/questions/50805897/django-unit-tests-failing-on-travis-ci-builds
+# Configure Django App for Heroku
+#django_heroku.settings(locals(), test_runner=False)
+
