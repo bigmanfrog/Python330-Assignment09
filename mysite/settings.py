@@ -40,6 +40,14 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "polling",
     "blogging",
+    #for django-allauth
+    "django.contrib.sites",
+    "allauth",
+    "allauth.account",
+    "allauth.socialaccount",
+    "allauth.socialaccount.providers.github",
+
+
 ]
 
 MIDDLEWARE = [
@@ -131,3 +139,16 @@ LOGIN_REDIRECT_URL = "/"
 # test runner failing so https://stackoverflow.com/questions/50805897/django-unit-tests-failing-on-travis-ci-builds
 # Configure Django App for Heroku
 # django_heroku.settings(locals(), test_runner=False)
+
+
+#add for allauth
+AUTHENTICATION_BACKENDS = (
+    "django.contrib.auth.backends.ModelBackend",
+    "allauth.account.auth_backends.AuthenticationBackend",
+)
+
+SITE_ID = 1
+
+ACCOUNT_EMAIL_VERIFICATION = 'none'
+
+LOGIN_REDIRECT_URL = '/'
